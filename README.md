@@ -36,6 +36,8 @@ not a face or maybe a face. A given sub-window is immediately discarded as not a
 
 
 B. Eye & Lips Region Extraction
+
+
 Once the face is detected, now comes the task to detect the facial landmarks in the face using the dlib’s landmark predictor. The
 landmark predictor returns 68 (x, y) coordinates representing different regions of the face, namely - mouth, left eyebrow, right
 eyebrow, right eye, left eye, nose, and jaw. For sure, I do not need all the landmarks, here I need to extract only the eye and the
@@ -47,6 +49,8 @@ Steps
 ![facial-landmark](https://user-images.githubusercontent.com/67435373/123995503-0982ac00-d9ec-11eb-82bb-b917f8fd4780.jpg)
 
 C. Eye-Blink & Yawn Detection
+
+
 After extracting mouth and eye coordinates from facial landmark the next task is to detect blink and yawn and this is done with the
 help of EAR(Eye Aspect Ratio) and MAR(Mouth Aspect Ratio).The eye region is marked by 6 coordinates. These coordinates can
 be used to find whether the eye is open or closed if the value of EAR is checked with a certain threshold value.
@@ -57,6 +61,9 @@ In the same way, MAR is calculated to detect if a person is yawning. Although, t
 have taken for points, 2 each from the upper and lower lip and calculated the mean distance between them as:
 MAR = (A + B) / (2.0 * C) 
 MAR>0.4,Yawn is detected.
+
+
+
 D. Alarm Generation
 Once the EAR and MAR ratios detected above and below their threshold ,the alarms are blown.
 
