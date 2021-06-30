@@ -52,11 +52,11 @@ help of EAR(Eye Aspect Ratio) and MAR(Mouth Aspect Ratio).The eye region is mark
 be used to find whether the eye is open or closed if the value of EAR is checked with a certain threshold value.
 E.g.
 EAR = (A + B) / (2.0 * C)
-EAR < = 0.2 ,Blink is detected
+EAR < = 0.3 ,Blink is detected
 In the same way, MAR is calculated to detect if a person is yawning. Although, there is no specific metric for calculating this, so
 have taken for points, 2 each from the upper and lower lip and calculated the mean distance between them as:
-MAR = (A + B + C) / 3.0
-MAR>14,Yawn is detected.
+MAR = (A + B) / (2.0 * C) 
+MAR>0.4,Yawn is detected.
 D. Alarm Generation
 Once the EAR and MAR ratios detected above and below their threshold ,the alarms are blown.
 
