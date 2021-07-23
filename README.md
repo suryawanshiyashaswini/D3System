@@ -69,4 +69,6 @@ Once the EAR and MAR ratios detected above and below their threshold ,the alarms
 
 This system determines the state of the driver in Day as well as Night conditions at runtime using an IR camera with an experimental result of 84% accuracy. Face and Eyes detection are implemented based on facial landmark and dlib.
 
+Please find below link for project demo:
+https://www.youtube.com/watch?v=dzYF0Fs3nvU&ab_channel=YashaswiniSuryawanshi
 
